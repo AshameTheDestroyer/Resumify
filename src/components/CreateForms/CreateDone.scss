@@ -1,0 +1,17 @@
+form {
+
+    .input-field-displayer {
+        display: flex;
+        flex-grow: 1;
+        place-content: center;
+        place-items: center;
+        color: var(--main-colour);
+
+        &>svg {
+            $size: 20rem;
+
+            width: $size;
+            height: $size;
+        }
+    }
+}

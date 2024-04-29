@@ -15,6 +15,14 @@ html {
 }
 
 :root {
+    --fore-colour: #FFF;
+    --main-colour: #1d3efc;
+    --fore-darker-colour: #999;
+    --background-colour: #202124;
+    --background-lighter-colour: #262A32;
+    --half-transparent: #0000007C;
+    --half-white-transparent: #FFFFFF7C;
+
     font-size: 62.5%;
 }
 
@@ -25,7 +33,8 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
 
-    @apply text-white bg-neutral-900;
+    color: var(--fore-colour);
+    background-color: var(--background-colour);
 }
 
 ::-webkit-scrollbar {
@@ -41,5 +50,21 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-emerald-600 border-2 border-black/50 rounded-[100rem];
+    background-color: var(--main-colour);
+    @apply border-2 border-black/50 rounded-[100rem];
+}
+
+input {
+    padding: 0.5rem 1rem;
+
+    border-radius: 5px;
+    accent-color: var(--main-colour);
+    background-color: var(--background-lighter-colour);
+}
+
+svg {
+    $size: 3rem;
+
+    width: $size;
+    height: $size;
 }

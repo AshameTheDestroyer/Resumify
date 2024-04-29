@@ -8,7 +8,9 @@ String.prototype.toTitleCase = function (): string {
     let currentValue: string = this as string;
 
     return currentValue
-        .split(" ")
+        .replace(" ", "-")
+        .replace("_", "-")
+        .split("-")
         .map(word => (word.length == 1) ? word : `${word[0].toUpperCase()}${word.slice(1)}`)
         .join(" ");
-}
+};
